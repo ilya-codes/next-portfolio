@@ -47,13 +47,7 @@ const contact = () => {
           <div className={contactStyles.imageBox}>
             <a href="/CV.pdf" target="_blank">
               <div className={contactStyles.image}>
-                <Image
-                  src="/CV.jpg"
-                  alt=""
-                  width={816}
-                  height={1056}
-                  // priority="true"
-                />
+                <Image src="/CV.jpg" alt="" width={816} height={1056} />
               </div>
             </a>
           </div>

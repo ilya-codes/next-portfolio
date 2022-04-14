@@ -13,11 +13,9 @@ import techStyles from "../styles/Tech.module.scss";
 
 const tech = () => {
   const [transition, setTransition] = useState(false);
-  // const [showText, setShowText] = useState(false);
 
   useEffect(() => {
     setTransition(true);
-    // setShowText(true);
   }, []);
 
   const techStack = [
