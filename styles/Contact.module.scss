@@ -1,0 +1,149 @@
+.contact {
+  min-height: calc(100vh - 3rem);
+  width: 100vw;
+  max-width: 100rem;
+  margin: auto;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-size: 1.1rem;
+
+  .contactBox {
+    width: 1rem;
+    height: 1rem;
+    margin: 4rem 1rem;
+    overflow: hidden;
+    background: linear-gradient(
+      to bottom,
+      transparentize(#fff, 0.8),
+      transparentize(#fff, 0.95)
+    );
+    transition: 1s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    .content {
+      margin: 3rem;
+      opacity: 0;
+      color: lightgrey;
+      font-size: 1.2rem;
+      transition: 0.3s ease-in-out;
+      transition-delay: 1s;
+
+      h1 {
+        margin-bottom: 2rem;
+        color: lightgreen;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .email {
+        margin: 2rem 0;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          color: lightgreen;
+        }
+
+        :first-child {
+          margin-right: 0.5rem;
+          font-size: 1.5rem;
+          color: lightgreen;
+        }
+      }
+
+      .imageBox {
+        height: 30rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          transition: 0.2s ease-in-out;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+          .image {
+            position: relative;
+            width: 200px;
+            height: 260px;
+          }
+
+          &:hover {
+            transform: scale(105%);
+          }
+        }
+      }
+
+      &.showText {
+        opacity: 1;
+      }
+    }
+    // outline: 1px solid red;
+  }
+
+  .contactBoxLeft {
+    transform: translate(-100vw, -100vh) rotate(-180deg);
+    // z-index: 1;
+  }
+
+  .contactBoxRight {
+    transform: translate(100vw, 100vh) rotate(-180deg);
+    // z-index: 0;
+  }
+
+  .transitionLeft {
+    width: 30rem;
+    height: 40rem;
+    transform: translate(0) rotate(0deg);
+  }
+
+  .transitionRight {
+    width: 30rem;
+    height: 40rem;
+    transform: translate(0) rotate(0deg);
+  }
+
+  @media screen and (max-width: 1280px) {
+    flex-direction: column;
+    margin: 3rem 0;
+
+    .contactBox {
+      margin: 0;
+      margin-top: 2rem;
+      text-align: center;
+
+      .content {
+        font-size: 0.8rem;
+        h1 {
+          font-size: 1.5rem;
+        }
+        .email {
+          flex-direction: column;
+          p {
+            margin: 0.5rem;
+          }
+        }
+
+        .imageBox {
+          height: 20rem;
+        }
+      }
+    }
+
+    .transitionLeft {
+      width: 80vw;
+      height: 20rem;
+      transform: translate(0) rotate(0deg);
+    }
+
+    .transitionRight {
+      width: 80vw;
+      height: 28rem;
+      transform: translate(0) rotate(0deg);
+    }
+  }
+}

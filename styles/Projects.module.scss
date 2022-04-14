@@ -1,0 +1,14 @@
+.projects {
+  background: #333;
+  margin: auto;
+  padding: 0 5rem;
+  width: 100vw;
+  max-width: 100rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 1280px) {
+    padding: 0 1rem 3rem;
+  }
+}

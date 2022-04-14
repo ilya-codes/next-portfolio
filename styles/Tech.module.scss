@@ -1,0 +1,69 @@
+@mixin delay($rule, $number, $value) {
+  @for $i from 1 to ($number + 1) {
+    &:nth-child(#{$i}) {
+      -webkit-#{$rule}-delay: (#{$i * $value});
+      #{$rule}-delay: (#{$i * $value});
+    }
+  }
+}
+
+.tech {
+  width: 100vw;
+  max-width: 100rem;
+  min-height: calc(100vh - 3rem);
+  overflow: hidden;
+  margin: auto;
+  background: #fff;
+  background: #333;
+
+  .wrapper {
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .techBox {
+      width: 30rem;
+      height: 4rem;
+      margin: 0.5rem 1rem;
+      background: linear-gradient(
+        to bottom,
+        transparentize(#fff, 0.8),
+        transparentize(#fff, 0.95)
+      );
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      // @include delay(transition, 8, 0.25s);
+      @include delay(transition, 8, 0.15s);
+      display: flex;
+      justify-content: center;
+
+      .contentBox {
+        margin: 1rem;
+        display: flex;
+        max-width: 10rem;
+        font-size: 1.7rem;
+        color: lightgreen;
+
+        h2 {
+          font-size: 1.2rem;
+          margin-left: 0.5rem;
+          pointer-events: none;
+          color: gray;
+        }
+      }
+    }
+    .transition {
+      opacity: 1;
+    }
+
+    @media screen and (max-width: 1280px) {
+      margin-top: 5rem;
+      .techBox {
+        width: 80vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,163 @@
+.wrapper {
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  background: linear-gradient(
+    to bottom right,
+    transparent 50%,
+    transparentize(#fff, 0.95) 50%
+  );
+
+  &.visible {
+    opacity: 1;
+  }
+
+  .projectCard {
+    position: relative;
+    width: 35rem;
+    height: 20rem;
+    margin: 3rem 0;
+    transition: 0.2s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    &.open {
+      transform: scale(105%);
+      box-shadow: lightgreen 0px 3px 8px;
+    }
+
+    .image {
+      position: absolute;
+      background: #fff;
+      transition: 0.1s ease-in-out;
+      pointer-events: none;
+      transition-delay: 0.5s;
+      transition-delay: 0.1s;
+
+      &.open {
+        opacity: 0;
+      }
+    }
+
+    .textBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparentize(#000000, 0.5);
+
+      .text {
+        align-items: center;
+        font-size: 1.2rem;
+        font-weight: 700;
+        pointer-events: none;
+        display: flex;
+        width: 100%;
+
+        &.open {
+          pointer-events: unset;
+        }
+
+        a {
+          text-decoration: none;
+          color: lightgrey;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          &:hover {
+            color: lightgreen;
+          }
+        }
+
+        ul {
+          list-style: none;
+
+          li {
+            margin: 1rem;
+          }
+        }
+
+        .innerBox {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 20rem;
+          height: 20rem;
+
+          transition: 0.5s ease-in-out;
+          background: linear-gradient(
+            to bottom,
+            transparentize(#fff, 0.8),
+            transparentize(#fff, 0.95)
+          );
+
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+          &.left {
+            margin-right: 1rem;
+            transform: translate(-100%, 100%) rotate(-75deg);
+            &.open {
+              transform: translate(0, 0) rotate(0);
+            }
+          }
+
+          &.right {
+            margin-left: 1rem;
+            transform: translate(100%, -100%) rotate(-75deg);
+            &.open {
+              transform: translate(0, 0) rotate(0);
+            }
+          }
+        }
+      }
+    }
+
+    &.right {
+      margin-left: auto;
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    flex-direction: column-reverse;
+
+    .projectCard {
+      max-width: 85vw;
+      max-height: 48.5vw;
+      margin: 1rem 0;
+
+      // .image {
+      //   max-width: 100%;
+      //   height: auto;
+      // }
+
+      .textBox {
+        // max-width: 100%;
+        height: 100%;
+      }
+
+      &.right {
+        margin-left: unset;
+      }
+    }
+    padding: 0;
+  }
+}
+.right {
+  flex-direction: row;
+  &.wrapper {
+    background: linear-gradient(
+      to top right,
+      transparent 50%,
+      transparentize(#fff, 0.95) 50%
+    );
+  }
+
+  @media screen and (max-width: 1280px) {
+    flex-direction: column-reverse;
+  }
+}

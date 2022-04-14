@@ -1,0 +1,150 @@
+.hero {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100rem;
+  margin: auto;
+  background: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  overflow: hidden;
+  // outline: 1px solid red;
+
+  .heroTextBox {
+    position: absolute;
+    margin: auto;
+    z-index: 1;
+    text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40rem;
+    height: 8rem;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    transition-delay: 1s;
+    // outline: 1px solid red;
+
+    &.showText {
+      opacity: 1;
+    }
+
+    .heroText {
+      font-size: 3rem;
+      font-weight: 700;
+      color: gray;
+      align-self: flex-start;
+
+      .name {
+        color: lightgreen;
+      }
+    }
+
+    .heroTextSecondary {
+      font-size: 2rem;
+      font-weight: 400;
+      color: gray;
+      align-self: flex-end;
+    }
+  }
+
+  .heroBox {
+    // background: linear-gradient(
+    //   to bottom,
+    //   transparentize(#000, 0.8),
+    //   transparentize(#000, 0.95)
+    // );
+    background: linear-gradient(
+      to bottom,
+      transparentize(#fff, 0.8),
+      transparentize(#fff, 0.95)
+    );
+    transition: 1s ease-in-out;
+    // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: lightgreen 0px 3px 8px;
+
+    h1,
+    h2 {
+      width: 30rem;
+      text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    // outline: 1px solid red;
+  }
+
+  .heroBoxLeft {
+    width: 25rem;
+    height: 25rem;
+    transform: translate(-100vw) rotate(-90deg);
+    z-index: 1;
+  }
+
+  .heroBoxRight {
+    width: 20rem;
+    height: 20rem;
+    transform: translate(100vw) rotate(-90deg);
+    z-index: 0;
+  }
+
+  .transitionLeft {
+    transform: translate(-20vw) rotate(45deg);
+  }
+
+  .transitionRight {
+    transform: translate(5vw, -15vh) rotate(45deg);
+  }
+
+  @media screen and (max-width: 1280px) {
+    .heroTextBox {
+      width: 20rem;
+      height: 8rem;
+
+      .heroText {
+        font-size: 2rem;
+      }
+      .heroTextSecondary {
+        font-size: 1.4rem;
+      }
+    }
+    // .heroBoxLeft {
+    //   // width: 15rem;
+    //   // height: 15rem;
+    //   width: 35vw;
+    //   height: 35vw;
+    // }
+
+    // .heroBoxRight {
+    //   // width: 10rem;
+    //   // height: 10rem;
+    //   width: 30vw;
+    //   height: 30vw;
+    // }
+
+    // .transitionLeft {
+    //   transform: translate(-18vw) rotate(45deg);
+    // }
+
+    // .transitionRight {
+    //   transform: translate(22vw, -8vh) rotate(45deg);
+    // }
+
+    .heroBoxLeft {
+      max-width: 45vw;
+      max-height: 45vw;
+    }
+
+    .heroBoxRight {
+      max-width: 40vw;
+      max-height: 40vw;
+    }
+
+    .transitionLeft {
+      transform: translate(-10vw, -2vh) rotate(45deg);
+    }
+
+    .transitionRight {
+      transform: translate(14vw, 3vh) rotate(45deg);
+    }
+  }
+}
