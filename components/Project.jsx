@@ -22,15 +22,14 @@ const Project = ({ isRight, img, prev, github, details }) => {
     setPos(window.scrollY);
   };
 
-  const scrollHandler = () => {
-    (window.scrollY > pos + 300 || window.scrollY < pos - 300) &&
-      setOpen(false);
-  };
-
   useEffect(() => {
+    const scrollHandler = () => {
+      (window.scrollY > pos + 300 || window.scrollY < pos - 300) &&
+        setOpen(false);
+    };
     window.addEventListener("scroll", scrollHandler);
     return () => window.removeEventListener("scroll", scrollHandler);
-  }, [open]);
+  }, [open, pos]);
 
   const moveRight = isRight ? projectStyles.right : "";
   // const leftText = isRight ? projectStyles.leftText : "";
@@ -63,7 +62,7 @@ const Project = ({ isRight, img, prev, github, details }) => {
                 open && projectStyles.open
               } ${projectStyles.left}`}
             >
-              <a href={prev} target="_blank">
+              <a href={prev} target="_blank" rel="noreferrer noopener">
                 Preview
               </a>
             </div>
@@ -72,7 +71,7 @@ const Project = ({ isRight, img, prev, github, details }) => {
                 open && projectStyles.open
               } ${projectStyles.right}`}
             >
-              <a href={github} target="_blank">
+              <a href={github} target="_blank" rel="noreferrer noopener">
                 Github
               </a>
             </div>

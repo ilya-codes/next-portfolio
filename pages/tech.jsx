@@ -11,7 +11,7 @@ import {
 } from "react-icons/si";
 import techStyles from "../styles/Tech.module.scss";
 
-const tech = () => {
+const Tech = () => {
   const [transition, setTransition] = useState(false);
 
   useEffect(() => {
@@ -49,4 +49,4 @@ const tech = () => {
   );
 };
 
-export default tech;
+export default Tech;

@@ -3,7 +3,7 @@ import { SiMaildotru } from "react-icons/si";
 import Image from "next/image";
 import contactStyles from "../styles/Contact.module.scss";
 
-const contact = () => {
+const Contact = () => {
   const [transition, setTransition] = useState(false);
   const [showText, setShowText] = useState(false);
 
@@ -57,4 +57,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;

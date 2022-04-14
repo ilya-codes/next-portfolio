@@ -20,7 +20,9 @@ const Hero = () => {
         <h1 className={heroStyles.heroText}>
           Hi! My Name Is <span className={heroStyles.name}>Ilya</span>
         </h1>
-        <h2 className={heroStyles.heroTextSecondary}>I'm a Web Developer</h2>
+        <h2 className={heroStyles.heroTextSecondary}>
+          I&apos;m a Web Developer
+        </h2>
       </div>
 
       <div
