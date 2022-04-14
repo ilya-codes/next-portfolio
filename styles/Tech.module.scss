@@ -35,7 +35,6 @@
       opacity: 0;
       transition: 0.3s ease-in-out;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      // @include delay(transition, 8, 0.25s);
       @include delay(transition, 8, 0.15s);
       display: flex;
       justify-content: center;

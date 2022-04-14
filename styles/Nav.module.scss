@@ -79,10 +79,6 @@
         text-decoration: none;
         color: gray;
         transition: 0.2s ease-in-out;
-
-        // &:hover {
-        //   color: #fff;
-        // }
       }
     }
   }
@@ -101,21 +97,18 @@
   .navigation {
     a {
       &:hover {
-        // color: #fff;
         color: lightgreen;
       }
     }
   }
-  // outline: 1px solid red;
+
   @media screen and (max-width: 1280px) {
     position: fixed;
     top: 0;
     height: 100vh;
     flex-direction: column-reverse;
     justify-content: space-between;
-    // padding: 0 4rem;
     background: transparentize(#333, 0.03);
-    // opacity: 0;
     transform: translateY(-100vh);
     transition: 0.4s ease-in-out;
 
@@ -145,20 +138,10 @@
       flex: 1;
 
       li {
-        // @include delay(transition, 8, 0.2s);
-        // transform: translateX(100vw);
         transition: 0.2s;
       }
-
-      // &.burgerMenu {
-      //   li {
-      //     transform: translateX(0);
-      //   }
-      // }
     }
     &.burgerMenu {
-      // opacity: 1;
-      // display: flex;
       transform: translateY(0);
     }
   }

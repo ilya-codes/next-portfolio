@@ -82,17 +82,14 @@
         opacity: 1;
       }
     }
-    // outline: 1px solid red;
   }
 
   .contactBoxLeft {
     transform: translate(-100vw, -100vh) rotate(-180deg);
-    // z-index: 1;
   }
 
   .contactBoxRight {
     transform: translate(100vw, 100vh) rotate(-180deg);
-    // z-index: 0;
   }
 
   .transitionLeft {

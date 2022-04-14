@@ -10,7 +10,6 @@
   align-items: center;
   pointer-events: none;
   overflow: hidden;
-  // outline: 1px solid red;
 
   .heroTextBox {
     position: absolute;
@@ -25,7 +24,6 @@
     opacity: 0;
     transition: 0.5s ease-in-out;
     transition-delay: 1s;
-    // outline: 1px solid red;
 
     &.showText {
       opacity: 1;
@@ -51,18 +49,12 @@
   }
 
   .heroBox {
-    // background: linear-gradient(
-    //   to bottom,
-    //   transparentize(#000, 0.8),
-    //   transparentize(#000, 0.95)
-    // );
     background: linear-gradient(
       to bottom,
       transparentize(#fff, 0.8),
       transparentize(#fff, 0.95)
     );
     transition: 1s ease-in-out;
-    // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     box-shadow: lightgreen 0px 3px 8px;
 
     h1,
@@ -70,7 +62,6 @@
       width: 30rem;
       text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
-    // outline: 1px solid red;
   }
 
   .heroBoxLeft {
@@ -107,27 +98,6 @@
         font-size: 1.4rem;
       }
     }
-    // .heroBoxLeft {
-    //   // width: 15rem;
-    //   // height: 15rem;
-    //   width: 35vw;
-    //   height: 35vw;
-    // }
-
-    // .heroBoxRight {
-    //   // width: 10rem;
-    //   // height: 10rem;
-    //   width: 30vw;
-    //   height: 30vw;
-    // }
-
-    // .transitionLeft {
-    //   transform: translate(-18vw) rotate(45deg);
-    // }
-
-    // .transitionRight {
-    //   transform: translate(22vw, -8vh) rotate(45deg);
-    // }
 
     .heroBoxLeft {
       max-width: 45vw;
