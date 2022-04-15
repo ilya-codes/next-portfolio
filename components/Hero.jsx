@@ -1,9 +1,20 @@
 import { useEffect, useState } from "react";
 import heroStyles from "../styles/Hero.module.scss";
+import { TiArrowSortedDown } from "react-icons/ti";
 
 const Hero = () => {
   const [transition, setTransition] = useState(false);
   const [showText, setShowText] = useState(false);
+  const [visible, setVisible] = useState(true);
+
+  const visibleHandler = () => {
+    window.scrollY > 200 && setVisible(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", visibleHandler);
+    return () => window.removeEventListener("scroll", visibleHandler);
+  }, []);
 
   useEffect(() => {
     setTransition(true);
@@ -35,6 +46,15 @@ const Hero = () => {
           transition && heroStyles.transitionRight
         }`}
       ></div>
+      <div
+        className={`${heroStyles.arrow} ${
+          showText && visible ? heroStyles.showText : ""
+        }`}
+      >
+        <TiArrowSortedDown />
+        <TiArrowSortedDown />
+        <TiArrowSortedDown />
+      </div>
     </div>
   );
 };

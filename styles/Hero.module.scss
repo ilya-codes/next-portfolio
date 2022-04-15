@@ -86,6 +86,23 @@
     transform: translate(5vw, -15vh) rotate(45deg);
   }
 
+  .arrow {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    font-size: 2rem;
+    color: lightgreen;
+    text-shadow: lightgreen 0px 3px 8px;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+
+    &.showText {
+      transition-delay: 1s;
+      opacity: 1;
+    }
+  }
+
   @media screen and (max-width: 1280px) {
     transform: translateY(-10vh);
 
