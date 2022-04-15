@@ -9,7 +9,7 @@ const Hero = () => {
 
   const visibleHandler = () => {
     window.scrollY > 150 && setVisible(false);
-    window.scrollY < 150 && setVisible(true);
+    window.scrollY < 100 && setVisible(true);
   };
 
   useEffect(() => {

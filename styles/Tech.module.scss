@@ -62,6 +62,10 @@
       margin-top: 5rem;
       min-height: 100vh;
 
+      &.wrapper {
+        justify-content: flex-start;
+      }
+
       .techBox {
         width: 70vw;
         height: 3.5rem;
