@@ -1,5 +1,5 @@
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   max-width: 100rem;
   margin: auto;
@@ -87,6 +87,8 @@
   }
 
   @media screen and (max-width: 1280px) {
+    transform: translateY(-10vh);
+
     .heroTextBox {
       width: 20rem;
       height: 8rem;

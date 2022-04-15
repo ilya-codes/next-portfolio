@@ -105,12 +105,12 @@
   @media screen and (max-width: 1280px) {
     position: fixed;
     top: 0;
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: column-reverse;
     justify-content: space-between;
     background: transparentize(#333, 0.03);
-    transform: translateY(-100vh);
-    transition: 0.4s ease-in-out;
+    transform: translateX(100vw);
+    transition: 0.3s ease-in-out;
 
     .navigation,
     .social {
@@ -125,7 +125,7 @@
     }
 
     .social {
-      margin: 3rem;
+      margin-bottom: 8rem;
       li {
         a {
           font-size: 2rem;
@@ -142,7 +142,7 @@
       }
     }
     &.burgerMenu {
-      transform: translateY(0);
+      transform: translateX(0);
     }
   }
 }
