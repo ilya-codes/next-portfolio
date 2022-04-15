@@ -1,4 +1,3 @@
-import React from "react";
 import detailsStyles from "../styles/Details.module.scss";
 
 const Details = ({ title, text, isRight }) => {
@@ -10,7 +9,7 @@ const Details = ({ title, text, isRight }) => {
         leftText && detailsStyles.leftText
       }`}
     >
-      <h2>{title}</h2>
+      <h2>{title}TEST</h2>
       <p>{text}</p>
     </div>
   );
