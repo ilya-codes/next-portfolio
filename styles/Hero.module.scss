@@ -128,15 +128,16 @@
       flex-direction: column;
       position: fixed;
       bottom: 0;
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: lightgreen;
-      text-shadow: lightgreen 0px 3px 8px;
       opacity: 0;
+      transform: translateY(-3rem);
       transition: 0.2s ease-in-out;
 
       &.visible {
         transition-delay: 1s;
         opacity: 1;
+        transform: translateY(0);
       }
     }
   }
