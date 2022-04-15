@@ -112,8 +112,6 @@
   @media screen and (max-width: 1280px) {
     position: fixed;
     top: 0;
-    // bottom: 0;
-    // min-height: 100vh;
     min-height: 100%;
     flex-direction: column-reverse;
     justify-content: space-between;
@@ -123,7 +121,6 @@
 
     .navigation,
     .social {
-      display: flex;
       justify-content: space-evenly;
 
       li {
@@ -145,9 +142,11 @@
     .navigation {
       flex-direction: column;
       flex: 1;
+      justify-content: center;
 
       li {
         transition: 0.2s;
+        margin: 3rem 0;
       }
     }
     &.burgerMenu {

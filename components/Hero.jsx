@@ -8,8 +8,8 @@ const Hero = () => {
   const [visible, setVisible] = useState(true);
 
   const visibleHandler = () => {
-    window.scrollY > 100 && setVisible(false);
-    window.scrollY < 300 && setVisible(true);
+    window.scrollY > 150 && setVisible(false);
+    window.scrollY < 150 && setVisible(true);
   };
 
   useEffect(() => {
@@ -49,7 +49,7 @@ const Hero = () => {
       ></div>
       <div
         className={`${heroStyles.arrow} ${
-          showText && visible ? heroStyles.showText : ""
+          showText && visible ? heroStyles.visible : ""
         }`}
       >
         <TiArrowSortedDown />

@@ -87,20 +87,7 @@
   }
 
   .arrow {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    bottom: 0;
-    font-size: 2rem;
-    color: lightgreen;
-    text-shadow: lightgreen 0px 3px 8px;
-    opacity: 0;
-    transition: 0.2s ease-in-out;
-
-    &.showText {
-      transition-delay: 1s;
-      opacity: 1;
-    }
+    display: none;
   }
 
   @media screen and (max-width: 1280px) {
@@ -134,6 +121,23 @@
 
     .transitionRight {
       transform: translate(14vw, 3vh) rotate(45deg);
+    }
+
+    .arrow {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      bottom: 0;
+      font-size: 2rem;
+      color: lightgreen;
+      text-shadow: lightgreen 0px 3px 8px;
+      opacity: 0;
+      transition: 0.2s ease-in-out;
+
+      &.visible {
+        transition-delay: 1s;
+        opacity: 1;
+      }
     }
   }
 }
