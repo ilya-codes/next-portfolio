@@ -1,10 +1,15 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import navStyles from "../styles/Nav.module.scss";
 
 const Nav = () => {
   const [menu, setMenu] = useState(false);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setVisible(true);
+  }, []);
 
   const menuHandler = () => {
     setMenu(!menu);
@@ -15,7 +20,10 @@ const Nav = () => {
 
   return (
     <>
-      <div className={navStyles.hamburger} onClick={menuHandler}>
+      <div
+        className={`${navStyles.hamburger} ${visible && navStyles.visible}`}
+        onClick={menuHandler}
+      >
         <div className={`${navStyles.bar1} ${menu && navStyles.open}`}></div>
         <div className={`${navStyles.bar2} ${menu && navStyles.open}`}></div>
         <div className={`${navStyles.bar3} ${menu && navStyles.open}`}></div>
