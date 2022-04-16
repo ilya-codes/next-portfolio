@@ -1,43 +1,37 @@
 import ScrollToTop from "../components/ScrollToTop";
 import Layout from "../components/Layout";
 import "../styles/global.scss";
-import Spinner from "../components/Spinner";
 
-import Router from "next/router";
+import Spinner from "../components/Spinner";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 function MyApp({ Component, pageProps }) {
-  const [ready, setReady] = useState(true);
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
 
-  // useEffect(() => {
-  //   setReady(true);
-  // }, []);
+  useEffect(() => {
+    const handleStart = (url) => {
+      url !== router.pathname ? setLoading(true) : setLoading(false);
+    };
+    const handleComplete = (url) => setLoading(false);
 
-  Router.onRouteChangeStart = (url) => {
-    // Some page has started loading
-    setReady(false);
-  };
-
-  Router.onRouteChangeComplete = (url) => {
-    // Some page has finished loading
-    setReady(true);
-  };
-
-  Router.onRouteChangeError = (err, url) => {
-    // an error occurred.
-  };
+    router.events.on("routeChangeStart", handleStart);
+    router.events.on("routeChangeComplete", handleComplete);
+    router.events.on("routeChangeError", handleComplete);
+  }, [router]);
 
   return (
     <>
-      {ready ? (
+      {loading ? (
+        <Spinner />
+      ) : (
         <>
           <ScrollToTop />
           <Layout>
             <Component {...pageProps} />
           </Layout>
         </>
-      ) : (
-        <Spinner />
       )}
     </>
   );
