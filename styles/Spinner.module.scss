@@ -1,0 +1,67 @@
+.loadingScreen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .spinner {
+    width: 15rem;
+    height: 8rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    div {
+      background: lightgreen;
+      width: 8%;
+      animation: spinner 0.5s linear 0.2s infinite alternate;
+      &:nth-child(1) {
+        animation-delay: 0s;
+      }
+      &:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      &:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+      &:nth-child(5) {
+        animation-delay: 0.4s;
+      }
+      &:nth-child(6) {
+        animation-delay: 0.5s;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    .spinner {
+      width: 10rem;
+      height: 5rem;
+    }
+  }
+}
+
+@keyframes spinner {
+  0% {
+    height: 10%;
+    background: #333;
+    box-shadow: none;
+  }
+
+  30% {
+    background: #333;
+    box-shadow: none;
+  }
+
+  100% {
+    height: 40%;
+    background: lightgreen;
+    box-shadow: lightgreen 0px 3px 8px;
+  }
+}

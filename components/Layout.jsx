@@ -1,12 +1,26 @@
 import Nav from "./Nav";
 import Footer from "./Footer";
+import Spinner from "./Spinner";
+import { useEffect, useState } from "react";
 
 const Layout = ({ children }) => {
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    setReady(true);
+  }, []);
+
   return (
     <>
-      <Nav />
-      {children}
-      <Footer />
+      {ready ? (
+        <>
+          <Nav />
+          {children}
+          <Footer />
+        </>
+      ) : (
+        <Spinner />
+      )}
     </>
   );
 };
