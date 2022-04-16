@@ -27,16 +27,11 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      {loading ? (
-        <Spinner />
-      ) : (
-        <>
-          <ScrollToTop />
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </>
-      )}
+      {loading && <Spinner />}
+      <ScrollToTop />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }
