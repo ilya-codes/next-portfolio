@@ -15,10 +15,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
             rel="stylesheet"
           />
-          <script
-            type="text/javascript"
-            src="https://www.free-counters.org/count/am1z"
-          ></script>
         </Head>
         <body>
           <Main />
