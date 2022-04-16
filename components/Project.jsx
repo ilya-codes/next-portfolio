@@ -50,7 +50,13 @@ const Project = ({ isRight, img, prev, github, details }) => {
         <div
           className={`${projectStyles.image} ${open && projectStyles.open} `}
         >
-          <Image src={img} alt="" width={2880} height={1645} />
+          <Image
+            src={img}
+            alt=""
+            width={2880}
+            height={1645}
+            placeholder="blur"
+          />
         </div>
 
         <div className={projectStyles.textBox}>

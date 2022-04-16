@@ -1,12 +1,16 @@
 import projectsStyles from "../styles/Projects.module.scss";
 import Project from "./Project";
 import Details from "./Details";
+import image1 from "../public/tvshow-guide.png";
+import image2 from "../public/recipes.png";
+import image3 from "../public/landing.png";
+import image4 from "../public/documentation.png";
 
 const Projects = () => {
   return (
     <div className={projectsStyles.projects}>
       <Project
-        img={"/tvshow-guide.png"}
+        img={image1}
         prev="https://ilya-codes.github.io/react-tv-show-guide"
         github="https://github.com/ilya-codes/react-tv-show-guide/tree/master"
         details={
@@ -17,7 +21,7 @@ const Projects = () => {
         }
       />
       <Project
-        img={"/recipes.png"}
+        img={image2}
         prev="https://ilya-codes.github.io/react-recipes-app"
         github="https://github.com/ilya-codes/react-recipes-app/tree/master"
         details={
@@ -30,7 +34,7 @@ const Projects = () => {
         isRight
       />
       <Project
-        img={"/landing.png"}
+        img={image3}
         prev=""
         github=""
         details={
@@ -41,7 +45,7 @@ const Projects = () => {
         }
       />
       <Project
-        img={"/documentation.png"}
+        img={image4}
         prev=""
         github=""
         details={
