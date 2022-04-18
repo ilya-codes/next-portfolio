@@ -3,8 +3,15 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
+          <meta charSet="utf-8" />
+          <meta name="description" content="Web developer portfolio website" />
+          <meta
+            name="keywords"
+            content="web developer, frontend developer, frontend engineer, portfolio"
+          />
+          <meta name="author" content="Ilya Dmitriev"></meta>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"

@@ -32,7 +32,6 @@ const Project = ({ isRight, img, prev, github, details }) => {
   }, [open, pos]);
 
   const moveRight = isRight ? projectStyles.right : "";
-  // const leftText = isRight ? projectStyles.leftText : "";
 
   return (
     <div

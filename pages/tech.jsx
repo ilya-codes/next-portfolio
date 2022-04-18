@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Head from "next/head";
 import {
   SiHtml5,
   SiCss3,
@@ -30,22 +31,27 @@ const Tech = () => {
   ];
 
   return (
-    <div className={techStyles.tech}>
-      <div className={techStyles.wrapper}>
-        {techStack.map((item, i) => (
-          <div
-            className={`${techStyles.techBox} ${techStyles.techBoxLeft} ${
-              transition && techStyles.transition
-            }`}
-            key={i}
-          >
-            <div className={techStyles.contentBox}>
-              {item[0]} <h2>{item[1]}</h2>
+    <>
+      <Head>
+        <title>Technologies stack</title>
+      </Head>
+      <div className={techStyles.tech}>
+        <div className={techStyles.wrapper}>
+          {techStack.map((item, i) => (
+            <div
+              className={`${techStyles.techBox} ${techStyles.techBoxLeft} ${
+                transition && techStyles.transition
+              }`}
+              key={i}
+            >
+              <div className={techStyles.contentBox}>
+                {item[0]} <h2>{item[1]}</h2>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

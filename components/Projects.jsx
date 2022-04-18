@@ -3,8 +3,6 @@ import Project from "./Project";
 import Details from "./Details";
 import image1 from "../public/tvshow-guide.png";
 import image2 from "../public/recipes.png";
-import image3 from "../public/landing.png";
-import image4 from "../public/documentation.png";
 
 const Projects = () => {
   return (
@@ -28,30 +26,6 @@ const Projects = () => {
           <Details
             title="Recipes App"
             text="Build with React, React-Context, third party API"
-            isRight
-          />
-        }
-        isRight
-      />
-      <Project
-        img={image3}
-        prev=""
-        github=""
-        details={
-          <Details
-            title="Coffeeshop Landing Page"
-            text="Build with Vanilla JS"
-          />
-        }
-      />
-      <Project
-        img={image4}
-        prev=""
-        github=""
-        details={
-          <Details
-            title="Documentation Page"
-            text="Build with Vanilla JS"
             isRight
           />
         }
