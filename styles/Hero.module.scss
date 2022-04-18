@@ -90,20 +90,8 @@
     display: none;
   }
 
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 768px) {
     transform: translateY(-10vh);
-
-    .heroTextBox {
-      width: 20rem;
-      height: 8rem;
-
-      .heroText {
-        font-size: 2rem;
-      }
-      .heroTextSecondary {
-        font-size: 1.4rem;
-      }
-    }
 
     .heroBoxLeft {
       max-width: 45vw;
@@ -113,14 +101,6 @@
     .heroBoxRight {
       max-width: 40vw;
       max-height: 40vw;
-    }
-
-    .transitionLeft {
-      transform: translate(-10vw, -2vh) rotate(45deg);
-    }
-
-    .transitionRight {
-      transform: translate(14vw, 3vh) rotate(45deg);
     }
 
     .arrow {
@@ -139,6 +119,38 @@
         opacity: 1;
         transform: translateY(0);
       }
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    .heroTextBox {
+      width: 20rem;
+      height: 8rem;
+
+      .heroText {
+        font-size: 2rem;
+      }
+      .heroTextSecondary {
+        font-size: 1.4rem;
+      }
+    }
+
+    .heroBoxLeft {
+      max-width: 35vw;
+      max-height: 35vw;
+    }
+
+    .heroBoxRight {
+      max-width: 30vw;
+      max-height: 30vw;
+    }
+
+    .transitionLeft {
+      transform: translate(-10vw, -2vh) rotate(45deg);
+    }
+
+    .transitionRight {
+      transform: translate(14vw, 3vh) rotate(45deg);
     }
   }
 }
