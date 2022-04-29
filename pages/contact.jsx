@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { SiMaildotru } from "react-icons/si";
 import Head from "next/head";
 import Image from "next/image";
-import cv from "../public/CV.jpg";
+import cv from "../public/CV1.jpg";
 import contactStyles from "../styles/Contact.module.scss";
 
 const Contact = () => {
@@ -53,7 +53,7 @@ const Contact = () => {
           >
             <p>Take a look at my CV</p>
             <div className={contactStyles.imageBox}>
-              <a href="/CV.pdf" target="_blank">
+              <a href="/CV1.pdf" target="_blank">
                 <div className={contactStyles.image}>
                   <Image
                     src={cv}

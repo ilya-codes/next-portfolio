@@ -12,7 +12,7 @@ class MyDocument extends Document {
             content="web developer, frontend developer, frontend engineer, portfolio"
           />
           <meta name="author" content="Ilya Dmitriev"></meta>
-          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
