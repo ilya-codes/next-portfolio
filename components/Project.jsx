@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Spinner from "./Spinner";
 import projectStyles from "../styles/Project.module.scss";
 
 const Project = ({ isRight, img, prev, github, details }) => {
@@ -55,7 +54,6 @@ const Project = ({ isRight, img, prev, github, details }) => {
             width={2880}
             height={1645}
             placeholder="blur"
-            blurDataURL={<Spinner />}
           />
         </div>
 

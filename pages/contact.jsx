@@ -51,7 +51,7 @@ const Contact = () => {
               showText && contactStyles.showText
             }`}
           >
-            <p>Take a look at my CV</p>
+            <h1>CV</h1>
             <div className={contactStyles.imageBox}>
               <a href="/CV1.pdf" target="_blank">
                 <div className={contactStyles.image}>
