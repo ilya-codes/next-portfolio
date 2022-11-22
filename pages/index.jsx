@@ -26,10 +26,19 @@ export default function Home() {
 
   const onScroll = useCallback((event) => {
     window.scrollY > 300 && setShowProj(true);
-    window.scrollY > 2100 && setTransition(true);
-    if (window.scrollY > 2800) {
-      setTransitionCont(true);
-      setShowText(true);
+
+    if (window.innerHeight < window.innerWidth) {
+      window.scrollY > 2200 && setTransition(true);
+      if (window.scrollY > 3000) {
+        setTransitionCont(true);
+        setShowText(true);
+      }
+    } else {
+      window.scrollY > 1900 && setTransition(true);
+      if (window.scrollY > 2700) {
+        setTransitionCont(true);
+        setShowText(true);
+      }
     }
   }, []);
 
@@ -60,6 +69,11 @@ export default function Home() {
         <Projects showProj={showProj} />
       </div>
       <div id="tech" className={techStyles.tech}>
+        <h3
+          className={`${techStyles.header} ${transition && techStyles.visible}`}
+        >
+          Technologies I Use
+        </h3>
         <div className={techStyles.wrapper}>
           {techStack.map((item, i) => (
             <div
