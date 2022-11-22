@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en">
+      <Html lang="en" style={{ scrollBehavior: "smooth" }}>
         <Head>
           <meta charSet="utf-8" />
           <meta name="description" content="Web developer portfolio website" />

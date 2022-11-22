@@ -2,154 +2,169 @@
   min-height: calc(100vh - 3rem);
   width: 100vw;
   max-width: 100rem;
-  margin: auto;
+  margin: 5rem auto;
+  padding: 0 5rem;
   background: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  font-size: 1.1rem;
 
-  .contactBox {
-    width: 1rem;
-    height: 1rem;
-    margin: 4rem 1rem;
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
+    font-size: 1.1rem;
     background: linear-gradient(
-      to bottom,
-      transparentize(#fff, 0.8),
-      transparentize(#fff, 0.95)
+      to bottom right,
+      transparent 50%,
+      transparentize(#fff, 0.95) 50%
     );
-    transition: 1s ease-in-out;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-    .content {
-      margin: 3rem;
-      opacity: 0;
-      color: lightgrey;
-      font-size: 1.2rem;
-      text-align: center;
-      transition: 0.3s ease-in-out;
-      transition-delay: 1s;
-
-      h1 {
-        margin-bottom: 2rem;
-        color: lightgreen;
-        font-size: 2rem;
-        font-weight: 700;
-      }
-
-      .email {
-        margin: 2rem 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: 0.2s ease-in-out;
-
-        &:hover {
-          color: lightgreen;
-        }
-
-        :first-child {
-          margin-right: 0.5rem;
-          font-size: 1.5rem;
-          color: lightgreen;
-        }
-      }
-
-      .imageBox {
-        height: 30rem;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-
-        a {
-          transition: 0.2s ease-in-out;
-          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-          .image {
-            position: relative;
-            width: 200px;
-            height: 260px;
-          }
-
-          &:hover {
-            transform: scale(105%);
-          }
-        }
-      }
-
-      &.showText {
-        opacity: 1;
-      }
-    }
-  }
-
-  .contactBoxLeft {
-    transform: translate(-100vw, -100vh) rotate(-180deg);
-  }
-
-  .contactBoxRight {
-    transform: translate(100vw, 100vh) rotate(-180deg);
-  }
-
-  .transitionLeft {
-    width: 30rem;
-    height: 40rem;
-    transform: translate(0) rotate(0deg);
-  }
-
-  .transitionRight {
-    width: 30rem;
-    height: 40rem;
-    transform: translate(0) rotate(0deg);
-  }
-
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    margin: 3rem 0;
 
     .contactBox {
-      margin: 0;
-      margin-top: 2rem;
+      width: 1rem;
+      height: 1rem;
+      margin: 4rem 1rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: linear-gradient(
+        to bottom,
+        transparentize(#fff, 0.8),
+        transparentize(#fff, 0.95)
+      );
+      transition: 1s ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
       .content {
-        font-size: 1rem;
+        margin: 3rem;
+        opacity: 0;
+        color: lightgrey;
+        font-size: 1.2rem;
+        text-align: center;
+        transition: 0.3s ease-in-out;
+        transition-delay: 1s;
+
         h1 {
-          font-size: 1.5rem;
+          margin-bottom: 2rem;
+          color: lightgreen;
+          font-size: 2rem;
+          font-weight: 700;
         }
+
         .email {
-          flex-direction: column;
-          p {
-            margin: 0.5rem;
+          margin: 2rem 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+
+          &:hover {
+            color: lightgreen;
+          }
+
+          :first-child {
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+            color: lightgreen;
           }
         }
 
         .imageBox {
-          height: 20rem;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+
+          a {
+            transition: 0.2s ease-in-out;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+            .image {
+              position: relative;
+              width: 200px;
+              height: 260px;
+            }
+
+            &:hover {
+              transform: scale(105%);
+            }
+          }
+        }
+
+        &.showText {
+          opacity: 1;
         }
       }
     }
 
+    .contactBoxLeft {
+      transform: translate(-100vw, -100vh) rotate(-180deg);
+    }
+
+    .contactBoxRight {
+      transform: translate(100vw, 100vh) rotate(-180deg);
+    }
+
     .transitionLeft {
-      width: 80vw;
-      height: 20rem;
+      width: 30rem;
+      height: 40rem;
       transform: translate(0) rotate(0deg);
     }
 
     .transitionRight {
-      width: 80vw;
-      height: 28rem;
+      width: 30rem;
+      height: 40rem;
       transform: translate(0) rotate(0deg);
     }
-  }
 
-  @media screen and (max-width: 1280px) {
-    .contactBox {
-      .content {
-        margin: 3rem 2rem;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      margin: 3rem 0;
+
+      .contactBox {
+        margin: 0;
+        margin-bottom: 2rem;
+
+        .content {
+          font-size: 1rem;
+          h1 {
+            font-size: 1.5rem;
+          }
+          .email {
+            flex-direction: column;
+            p {
+              margin: 0.5rem;
+            }
+          }
+
+          .imageBox {
+            height: 20rem;
+          }
+        }
+      }
+
+      .transitionLeft {
+        width: 80vw;
+        height: 20rem;
+        transform: translate(0) rotate(0deg);
+      }
+
+      .transitionRight {
+        width: 80vw;
+        height: 28rem;
+        transform: translate(0) rotate(0deg);
       }
     }
+
+    @media screen and (max-width: 1280px) {
+      .contactBox {
+        .content {
+          margin: 3rem 2rem;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    margin: 0 auto;
+    padding: 0;
   }
 }

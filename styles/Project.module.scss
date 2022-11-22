@@ -147,6 +147,9 @@
       transparent 50%,
       transparentize(#fff, 0.95) 50%
     );
+    &.visible {
+      opacity: 1;
+    }
   }
 
   @media screen and (max-width: 1280px) {

@@ -51,13 +51,13 @@ const Nav = () => {
         </ul>
         <ul className={navStyles.navigation}>
           <li onClick={closeMenu}>
-            <Link href="/">Home</Link>
+            <Link href="#hero">Home</Link>
           </li>
           <li onClick={closeMenu}>
-            <Link href="/tech">Tech Stack</Link>
+            <Link href="#tech">Tech Stack</Link>
           </li>
           <li onClick={closeMenu}>
-            <Link href="/contact">Contact</Link>
+            <Link href="#contact">Contact</Link>
           </li>
         </ul>
       </nav>

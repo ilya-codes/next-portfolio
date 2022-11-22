@@ -2,19 +2,9 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import projectStyles from "../styles/Project.module.scss";
 
-const Project = ({ isRight, img, prev, github, details }) => {
+const Project = ({ isRight, img, prev, github, details, showProj }) => {
   const [open, setOpen] = useState(false);
   const [pos, setPos] = useState(null);
-  const [visible, setVisible] = useState(false);
-
-  const visibleHandler = () => {
-    window.scrollY > 300 && setVisible(true);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", visibleHandler);
-    return () => window.removeEventListener("scroll", visibleHandler);
-  }, []);
 
   const projectOpenHandler = () => {
     setOpen(!open);
@@ -35,7 +25,7 @@ const Project = ({ isRight, img, prev, github, details }) => {
   return (
     <div
       className={`${projectStyles.wrapper} ${moveRight} ${
-        visible && projectStyles.visible
+        showProj && projectStyles.visible
       }`}
     >
       {details}

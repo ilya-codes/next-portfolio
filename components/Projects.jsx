@@ -3,13 +3,14 @@ import Project from "./Project";
 import Details from "./Details";
 import { data } from "../data";
 
-const Projects = () => {
+const Projects = ({ showProj }) => {
   let isRight = false;
 
   return (
     <div className={projectsStyles.projects}>
       {data.map((project) => (
         <Project
+          showProj={showProj}
           key={project.id}
           img={project.image}
           prev={project.preview}
