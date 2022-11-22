@@ -26,8 +26,8 @@ export default function Home() {
 
   const onScroll = useCallback((event) => {
     window.scrollY > 300 && setShowProj(true);
-    window.scrollY > 2200 && setTransition(true);
-    if (window.scrollY > 3000) {
+    window.scrollY > 2100 && setTransition(true);
+    if (window.scrollY > 2800) {
       setTransitionCont(true);
       setShowText(true);
     }
