@@ -77,7 +77,11 @@ export default function Home() {
       </div>
 
       <div id="contact" className={contactStyles.contact}>
-        <div className={contactStyles.wrapper}>
+        <div
+          className={`${contactStyles.wrapper} ${
+            transitionCont && contactStyles.showBg
+          }`}
+        >
           <div
             className={`${contactStyles.contactBox} ${
               contactStyles.contactBoxLeft
