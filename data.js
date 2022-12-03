@@ -1,3 +1,15 @@
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNodedotjs,
+  SiNextdotjs,
+  SiExpress,
+  SiMongodb,
+} from "react-icons/si";
+
 import mindboard from "./public/mindboard.png";
 import tvshowImage from "./public/tvshow-guide.png";
 import recipesImage from "./public/recipes.png";
@@ -36,4 +48,16 @@ export const data = [
     title: "Easy Qr Code Generator",
     description: "Vanilla Javascript, Bootstrap styled",
   },
+];
+
+export const techStack = [
+  [<SiHtml5 />, "HTML"],
+  [<SiCss3 />, "CSS"],
+  [<SiJavascript />, "javaScript"],
+  [<SiTypescript />, "TypeScript"],
+  [<SiReact />, "React"],
+  [<SiNextdotjs />, "Next.js"],
+  [<SiNodedotjs />, "Node.js"],
+  [<SiExpress />, "Express"],
+  [<SiMongodb />, "MongoDB"],
 ];

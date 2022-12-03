@@ -1,26 +1,19 @@
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 import Head from "next/head";
-import {
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiReact,
-  SiNodedotjs,
-  SiNextdotjs,
-  SiExpress,
-  SiMongodb,
-} from "react-icons/si";
 import techStyles from "../styles/Tech.module.scss";
 import { useCallback, useEffect, useState } from "react";
 import { SiMaildotru } from "react-icons/si";
+import { techStack } from "../data";
 import Image from "next/image";
 import cv from "../public/CV1.jpg";
 import contactStyles from "../styles/Contact.module.scss";
 
 export default function Home() {
   const [showProj, setShowProj] = useState(false);
-  const [transition, setTransition] = useState(false);
+  const [transitionTech, setTransitionTech] = useState(false);
   const [transitionCont, setTransitionCont] = useState(false);
   const [showText, setShowText] = useState(false);
 
@@ -28,13 +21,13 @@ export default function Home() {
     window.scrollY > 300 && setShowProj(true);
 
     if (window.innerHeight < window.innerWidth) {
-      window.scrollY > 2200 && setTransition(true);
+      window.scrollY > 2200 && setTransitionTech(true);
       if (window.scrollY > 3000) {
         setTransitionCont(true);
         setShowText(true);
       }
     } else {
-      window.scrollY > 1900 && setTransition(true);
+      window.scrollY > 1900 && setTransitionTech(true);
       if (window.scrollY > 2700) {
         setTransitionCont(true);
         setShowText(true);
@@ -48,29 +41,21 @@ export default function Home() {
       window.removeEventListener("scroll", onScroll, { passive: true });
   }, []);
 
-  const techStack = [
-    [<SiHtml5 />, "HTML"],
-    [<SiCss3 />, "CSS"],
-    [<SiJavascript />, "javaScript"],
-    [<SiReact />, "React"],
-    [<SiNextdotjs />, "Next.js"],
-    [<SiNodedotjs />, "Node.js"],
-    [<SiExpress />, "Express"],
-    [<SiMongodb />, "MongoDB"],
-  ];
-
   return (
     <>
       <Head>
         <title>Web Developer Portfolio</title>
       </Head>
+      <Nav />
       <div id="hero">
         <Hero />
         <Projects showProj={showProj} />
       </div>
       <div id="tech" className={techStyles.tech}>
         <h3
-          className={`${techStyles.header} ${transition && techStyles.visible}`}
+          className={`${techStyles.header} ${
+            transitionTech && techStyles.visible
+          }`}
         >
           Technologies I Use
         </h3>
@@ -78,7 +63,7 @@ export default function Home() {
           {techStack.map((item, i) => (
             <div
               className={`${techStyles.techBox} ${techStyles.techBoxLeft} ${
-                transition && techStyles.transition
+                transitionTech && techStyles.transition
               }`}
               key={i}
             >
@@ -145,6 +130,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

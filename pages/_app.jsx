@@ -1,5 +1,4 @@
 import ScrollToTop from "../components/ScrollToTop";
-import Layout from "../components/Layout";
 import Spinner from "../components/Spinner";
 import { useEffect, useState } from "react";
 import { analytics } from "../utils/firebase";
@@ -19,9 +18,7 @@ function MyApp({ Component, pageProps }) {
     <>
       {loading && <Spinner />}
       <ScrollToTop />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Component {...pageProps} />
     </>
   );
 }
