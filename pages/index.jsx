@@ -21,14 +21,14 @@ export default function Home() {
     window.scrollY > 300 && setShowProj(true);
 
     if (window.innerHeight < window.innerWidth) {
-      window.scrollY > 2200 && setTransitionTech(true);
-      if (window.scrollY > 3000) {
+      window.scrollY > 2800 && setTransitionTech(true);
+      if (window.scrollY > 3600) {
         setTransitionCont(true);
         setShowText(true);
       }
     } else {
-      window.scrollY > 1900 && setTransitionTech(true);
-      if (window.scrollY > 2700) {
+      window.scrollY > 2500 && setTransitionTech(true);
+      if (window.scrollY > 3100) {
         setTransitionCont(true);
         setShowText(true);
       }

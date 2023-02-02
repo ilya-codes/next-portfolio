@@ -4,17 +4,17 @@ import {
   SiJavascript,
   SiTypescript,
   SiReact,
-  SiNodedotjs,
   SiNextdotjs,
-  SiExpress,
-  SiMongodb,
+  SiSass,
+  SiTailwindcss,
+  SiRedux,
 } from "react-icons/si";
 
-import coffeeTime from "./public/coffee-time.png";
-import mindboard from "./public/mindboard.png";
-import tvshowImage from "./public/tvshow-guide.png";
-import recipesImage from "./public/recipes.png";
-import qr from "./public/qr.png";
+import coffeeTime from "./public/coffee-time.webp";
+import mindboard from "./public/mindboard.webp";
+import tvshowImage from "./public/tvshow-guide.webp";
+import recipesImage from "./public/recipes.webp";
+import qr from "./public/qr.webp";
 
 export const data = [
   {
@@ -63,11 +63,11 @@ export const data = [
 export const techStack = [
   [<SiHtml5 />, "HTML"],
   [<SiCss3 />, "CSS"],
+  [<SiSass />, "Sass"],
+  [<SiTailwindcss />, "Tailwind"],
   [<SiJavascript />, "javaScript"],
   [<SiTypescript />, "TypeScript"],
   [<SiReact />, "React"],
   [<SiNextdotjs />, "Next.js"],
-  [<SiNodedotjs />, "Node.js"],
-  [<SiExpress />, "Express"],
-  [<SiMongodb />, "MongoDB"],
+  [<SiRedux />, "Redux"],
 ];
