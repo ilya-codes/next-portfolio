@@ -10,6 +10,7 @@ import {
   SiMongodb,
 } from "react-icons/si";
 
+import coffeeTime from "./public/coffee-time.png";
 import mindboard from "./public/mindboard.png";
 import tvshowImage from "./public/tvshow-guide.png";
 import recipesImage from "./public/recipes.png";
@@ -18,6 +19,15 @@ import qr from "./public/qr.png";
 export const data = [
   {
     id: 1,
+    image: coffeeTime,
+    preview: "https://coffee-time-xi.vercel.app/",
+    github: "https://github.com/ilya-codes/coffee-time",
+    title: "Coffee Time",
+    description:
+      "Build with Next.js, Typescript, Redux Toolkit, Tailwind and Firebase",
+  },
+  {
+    id: 2,
     image: mindboard,
     preview: "https://mind-board-ilya-codes.vercel.app/",
     github: "https://github.com/ilya-codes/mind-board",
@@ -25,7 +35,7 @@ export const data = [
     description: "Build with Next.js, Tailwind and Firebase",
   },
   {
-    id: 2,
+    id: 3,
     image: tvshowImage,
     preview: "https://ilya-codes.github.io/react-tv-show-guide",
     github: "https://github.com/ilya-codes/react-tv-show-guide/tree/master",
@@ -33,7 +43,7 @@ export const data = [
     description: "Build with React, Styled Components and Tvmaze API",
   },
   {
-    id: 3,
+    id: 4,
     image: recipesImage,
     preview: "https://ilya-codes.github.io/react-recipes-app",
     github: "https://github.com/ilya-codes/react-recipes-app/tree/master",
@@ -41,7 +51,7 @@ export const data = [
     description: "Build with React, Styled Components and Edamam API",
   },
   {
-    id: 4,
+    id: 5,
     image: qr,
     preview: "https://ilya-codes.github.io/easy-qr-generator",
     github: "https://github.com/ilya-codes/easy-qr-generator",
