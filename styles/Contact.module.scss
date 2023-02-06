@@ -57,10 +57,14 @@
           align-items: center;
           justify-content: center;
           cursor: pointer;
-          transition: 0.2s ease-in-out;
 
-          &:hover {
-            color: lightgreen;
+          a {
+            color: lightgrey;
+            transition: 0.2s ease-in-out;
+            text-decoration: none;
+            &:hover {
+              color: lightgreen;
+            }
           }
 
           :first-child {

@@ -74,7 +74,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-
       <div id="contact" className={contactStyles.contact}>
         <div
           className={`${contactStyles.wrapper} ${
@@ -92,14 +91,13 @@ export default function Home() {
               }`}
             >
               <h1>Contact Me</h1>
-
               <div className={contactStyles.email}>
                 <SiMaildotru />
-                <p>ilya.d.mailbox@gmail.com</p>
+                <a href="mailto: ilya.d.mailbox@gmail.com">
+                  ilya.d.mailbox@gmail.com
+                </a>
               </div>
-              <p>
-                Feel free to contact me if you have any questions or offerings!
-              </p>
+              <p>Feel free to contact me if you have any offerings!</p>
             </div>
           </div>
           <div
