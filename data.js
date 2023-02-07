@@ -20,7 +20,7 @@ export const data = [
   {
     id: 1,
     image: coffeeTime,
-    preview: "https://coffee-time-xi.vercel.app/",
+    preview: "https://coffee-time-sigma.vercel.app/",
     github: "https://github.com/ilya-codes/coffee-time",
     title: "Coffee Time",
     description:
